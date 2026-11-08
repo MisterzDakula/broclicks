@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download BroClicks, a native Windows mouse and keyboard automation app created by DAKULA.">
+  <meta name="theme-color" content="#10101b">
+  <title>BroClicks — Windows Automation</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0b12; --panel: #151522; --muted: #a7a7bd;
+      --white: #f7f7ff; --pink: #f000d8; --cyan: #70e1ff;
+      --line: rgba(255,255,255,.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--white);
+      font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(ellipse at 50% -20%, rgba(240,0,216,.25), transparent 55%), var(--bg);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 36px)); margin: auto; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+    .brand { display:flex; gap:12px; align-items:center; font-weight:900; letter-spacing:.08em; }
+    .brand img { width:42px; height:42px; object-fit:contain; border-radius:12px; }
+    .tag { color:var(--cyan); font-size:.78rem; font-weight:800; letter-spacing:.13em; }
+    .hero { text-align:center; padding:62px 0 46px; }
+    .hero img { width:min(220px, 55vw); height:180px; object-fit:contain; filter:drop-shadow(0 15px 45px rgba(240,0,216,.2)); }
+    h1 { margin:12px 0 8px; font-size:clamp(2.6rem, 8vw, 5.3rem); line-height:1; letter-spacing:-.06em; }
+    h1 span { color:var(--pink); }
+    .lead { max-width:660px; margin:18px auto 28px; color:var(--muted); font-size:1.12rem; }
+    .download {
+      display:inline-flex; align-items:center; justify-content:center; gap:12px;
+      padding:16px 26px; border-radius:14px; text-decoration:none; font-weight:900;
+      background:linear-gradient(110deg, #ef00d5, #a52bff); color:white;
+      box-shadow:0 12px 38px rgba(220,0,210,.24); transition:transform .18s, filter .18s;
+    }
+    .download:hover { transform:translateY(-2px); filter:brightness(1.1); }
+    .meta { color:var(--muted); font-size:.9rem; margin-top:13px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:30px 0 52px; }
+    .card { background:rgba(21,21,34,.88); border:1px solid var(--line); border-radius:18px; padding:22px; }
+    .card h3 { margin:8px 0 5px; }
+    .card p { color:var(--muted); margin:0; font-size:.95rem; }
+    .icon { font-size:1.55rem; }
+    section { margin:42px 0; }
+    h2 { font-size:1.65rem; margin:0 0 16px; }
+    .steps { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .step { display:flex; gap:14px; align-items:flex-start; }
+    .num { flex:0 0 32px; height:32px; display:grid; place-items:center; border-radius:10px; background:rgba(240,0,216,.16); color:#ff76ed; font-weight:900; }
+    .step p { margin:3px 0 0; color:var(--muted); }
+    .notice { border:1px solid rgba(255,193,7,.28); background:rgba(255,193,7,.06); border-radius:16px; padding:18px 20px; color:#e9dfbd; }
+    .notice strong { color:#ffe18a; }
+    code { color:#a8f0d0; background:#090a12; padding:3px 7px; border-radius:6px; overflow-wrap:anywhere; }
+    .hash { font-size:.82rem; color:var(--muted); overflow-wrap:anywhere; }
+    footer { border-top:1px solid var(--line); padding:25px 0 36px; color:var(--muted); text-align:center; font-size:.9rem; }
+    footer strong { color:white; }
+    @media(max-width:700px) {
+      .grid { grid-template-columns:1fr; }
+      .steps { grid-template-columns:1fr; }
+      .hero { padding-top:35px; }
+      header { padding:16px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><img src="logo.png" alt="BroClicks logo"><span>BROCLICKS</span></div>
+      <div class="tag">NATIVE WINDOWS APP</div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <img src="logo.png" alt="BroClicks mouse logo">
+        <div class="tag">MOUSE + KEYBOARD AUTOMATION</div>
+        <h1>BRO<span>CLICKS</span></h1>
+        <p class="lead">A Windows automation tool with a built-in script editor, adjustable action timing, global hotkey controls and click counter.</p>
+        <a class="download" href="BroClicks.exe" download="BroClicks.exe" aria-label="Download BroClicks for Windows">
+          <span aria-hidden="true">⬇</span> DOWNLOAD FOR WINDOWS
+        </a>
+        <div class="meta">Windows 10/11 · 64-bit · EXE · No Python installation required</div>
+      </div>
+
+      <div class="grid">
+        <article class="card"><div class="icon">🖱️</div><h3>Mouse automation</h3><p>Automate left mouse clicks using the native Windows input API.</p></article>
+        <article class="card"><div class="icon">⌨️</div><h3>Keyboard automation</h3><p>Send supported keyboard keys with configurable timing.</p></article>
+        <article class="card"><div class="icon">⌘</div><h3>BRO script editor</h3><p>Write, apply, open and save reusable <code>.bro</code> scripts.</p></article>
+      </div>
+
+      <section>
+        <h2>How to install and open</h2>
+        <div class="steps">
+          <div class="card step"><span class="num">1</span><p><strong>Download</strong><br>Click the Download for Windows button and save <code>BroClicks.exe</code>.</p></div>
+          <div class="card step"><span class="num">2</span><p><strong>Open Downloads</strong><br>In File Explorer, open your Downloads folder and locate the EXE.</p></div>
+          <div class="card step"><span class="num">3</span><p><strong>Check the publisher warning</strong><br>If Windows shows an unrecognized-app warning, read the safety note below before deciding.</p></div>
+          <div class="card step"><span class="num">4</span><p><strong>Start BroClicks</strong><br>Open the app, edit or use the example script, then press Apply Script and F6 to start or stop.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Windows says “Microsoft Defender SmartScreen prevented an unrecognized app”?</h2>
+        <div class="notice">
+          <strong>Important safety note:</strong> This build may be unsigned, so Windows may not recognize its publisher. That warning is not proof that the file is safe or unsafe.
+          <ol>
+            <li>Only continue if you got this EXE from a source you trust and you expected this download.</li>
+            <li>Verify the SHA-256 value shown below against the file you downloaded.</li>
+            <li>If the hash matches and you trust the build, select <strong>More info</strong>, review the app name, and then choose <strong>Run anyway</strong> if Windows offers that option.</li>
+            <li>If Microsoft Defender reports malware, or the hash does not match, <strong>do not run the file</strong>. Leave protection enabled and contact the developer.</li>
+          </ol>
+          Do not turn off Microsoft Defender, SmartScreen, or other security protections just to install this app.
+        </div>
+      </section>
+
+      <section>
+        <h2>Verify your download</h2>
+        <p class="hash"><strong>File:</strong> BroClicks.exe</p>
+        <p class="hash"><strong>SHA-256:</strong> <code>c12c5c000b47be1d68d21f3d7fac2c341f60421ca5f7c1ac51ba4c3d116ee41e</code></p>
+        <p class="hash">On Windows, you can calculate the hash in Command Prompt with:<br><code>certutil -hashfile BroClicks.exe SHA256</code></p>
+      </section>
+
+      <section>
+        <h2>Creator</h2>
+        <div class="card">
+          <strong>Created by DAKULA</strong><br>
+          YouTube: <a href="https://www.youtube.com/@MisterzDakula" target="_blank" rel="noopener">@MisterzDakula</a><br>
+          Bloxd.io: <strong>Developer_Dakula</strong>
+        </div>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> <strong>BROCLICKS</strong> · Created by DAKULA</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
